@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery -->
+	<script src="ui/js/jquery.min.js"></script>
+
+	<script src="ui/js/custom.js"></script>
+
+	<!-- Bootstrap 3 -->
+	<link rel="stylesheet" type="text/css" href="ui/css/bootstrap.min.css" />
+	<script src="ui/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="ui/css/bootstrap-table.css">
+	<script src="ui/js/bootstrap-table.js"></script>
+	<title>p2p radio</title>
+</head>
+<body style="padding-top: 100px;">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="col-md-6">
+				<p class="navbar-brand">
+					<img src="ui/css/radio.css"><h1>p2p Radio</h1>
+				</p>
+				<!-- <button id="settingsbutton" type="button" class="btn btn-primary"> -->
+				<!--   <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> -->
+				<!-- </button> -->
+				<!-- <p> -->
+				<!--   <h4>A music sharing application<h4> -->
+				<!-- </p> -->
+			</div>
+			<div class="col-md-6">
+				<audio controls id="player">
+					<source src= "" type="audio/mpeg">
+					</audio>
+				</div>
+			</div>
+		</nav>
+		<!-- <div id="modal> -->
+		<!-- </div> -->
+		<div class="container-fluid" style="margin: 30px">
+			<!-- <div class="row"> -->
+			<!--   <div class="col-md-6"> -->
+			<!--     <h1>p2p Radio -->
+			<!--     </h1> -->
+			<!--   </div> -->
+			<!--   <div class="col-md-6"> -->
+			<!--   </div> -->
+			<!-- </div> -->
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="row panel panel-info input-group form-horizontal" >
+						<input id="searchbox" type="text" class="form-control" placeholder="Search for File"></input>
+						<div class="input-group-addon"
+							<button type="button" class="btn btn-primary" id="searchbutton">Search</button>
+						</div>
+					</div>
+
+					<div class="row panel panel-info">
+						<div class="panel-heading">Chatbox</div>
+						<div id="chatbox" style="overflow: auto; min-height:300px; max-height: 300px; padding: 10px 10px" class="">
+							<div id="chatlog" class="list-group">
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="input-group">
+								<input id="chatinput" type="text" class="form-control">
+								<span id="chatsend" class="input-group-addon">Send</span>
+								<span id="chatrefresh" class="glyphicon glyphicon-repeat input-group-addon" aria-hidden="true"></span>
+								<!-- <div class="input-group-addon"> -- -->
+								<!--   <button id="chatsend" type="button" class="btn btn-primary">Send</button> -- -->
+								<!-- </div> -- -->
+								<!-- <div class="input-group-addon"> -- -->
+								<!--   <button id="chatrefresh" type="button" class="btn btn-primary"> -- -->
+								<!-- 	<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> -- -->
+								<!--   </button> -- -->
+								<!-- </div> -- -->
+							</div>
+						</div>
+					</div>
+
+					<div class="row panel panel-info input-group form-horizontal" >
+						<input id="dirbox" type="text" class="form-control"
+						placeholder="Enter Directory Shared"></input>
+						<div class="input-group-addon"
+							<button type="button" class="btn btn-primary" id="dirbutton">Share</button>
+						</div>
+					</div>
+				</div>
+			<div class="col-md-8">
+				<table id="searchresult" data-toggle="table" data-url="data1.json">
+					<thead>
+						<tr class="info">
+							<th data-field="filename" data-sortable="True">FileName</th>
+							<th data-field="size" data-sortable="True">Size(Bytes)</th>
+							<th data-field="ip" data-sortable="True">IP Address</th>
+							<th data-field="md5sum" data-sortable="True">MD5SUM</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
